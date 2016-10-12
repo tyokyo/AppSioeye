@@ -1,6 +1,6 @@
 package one.hardware.Testcase;
 /**
- * 睡眠时间设置15s 60s 10min Never
+ * 鐫＄湢鏃堕棿璁剧疆15s 60s 10min Never
  * */
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiSelector;
@@ -11,7 +11,7 @@ public class Sleeptime_setting extends Base {
 
 	public void findsetting()throws Exception{
 		int i,j,k;
-		System.out.println("苦逼寻找setting中");
+		System.out.println("鑻﹂�煎鎵緎etting涓�");
 		outer:
 			for (k=1;k>0;k++)
 			{
@@ -24,7 +24,7 @@ public class Sleeptime_setting extends Base {
 						System.out.println("Orz..");
 						if (common.findViewByText2("Settings").exists() == true)
 						{
-							System.out.println("o(∩_∩)o 找到了");
+							System.out.println("o(鈭鈭�)o 鎵惧埌浜�");
 							break outer;
 						}	
 					}
@@ -37,14 +37,14 @@ public class Sleeptime_setting extends Base {
 						System.out.println("Orz.");
 						if (common.findViewByText2("Settings").exists() == true)
 						{
-							System.out.println("o(∩_∩)o 找到了");
+							System.out.println("o(鈭鈭�)o 鎵惧埌浜�");
 							break outer;
 						}				
 					}		
 				}
 			}
 	}
-	//在任意界面寻找setting界面
+	//鍦ㄤ换鎰忕晫闈㈠鎵緎etting鐣岄潰
 	public void test15Seconds() throws Exception{
 		try {
 			initUIAutomator(this.getName());
@@ -57,7 +57,7 @@ public class Sleeptime_setting extends Base {
 			common.findViewByText("Display").click();
 			common.findViewByText("Sleep").click();
 			common.findViewByText("15 seconds").click();
-			common.infoLog("等待15s");
+			common.infoLog("绛夊緟15s");
 			common.waitTime(16);
 			if (common.device.isScreenOn() == false)
 			{
@@ -76,7 +76,7 @@ public class Sleeptime_setting extends Base {
 			common.startLog( "*****End to run " + runcase + " *****");
 		}
 	}
-	//15s设置
+	//15s璁剧疆
 	public void test60Seconds() throws Exception{
 		try {
 			initUIAutomator(this.getName());
@@ -89,7 +89,7 @@ public class Sleeptime_setting extends Base {
 			common.findViewByText("Display").click();
 			common.findViewByText("Sleep").click();
 			common.findViewByText("60 seconds").click();
-			common.infoLog("等待60s");
+			common.infoLog("绛夊緟60s");
 			common.waitTime(61);
 			if (common.device.isScreenOn() == false)
 			{
@@ -108,7 +108,7 @@ public class Sleeptime_setting extends Base {
 			common.startLog( "*****End to run " + runcase + " *****");
 		}
 	}
-	//60s设置
+	//60s璁剧疆
 	public void test10minutes() throws Exception{
 		try {
 			initUIAutomator(this.getName());
@@ -121,7 +121,7 @@ public class Sleeptime_setting extends Base {
 			common.findViewByText("Display").click();
 			common.findViewByText("Sleep").click();
 			common.findViewByText("10 minutes").click();
-			common.infoLog("等待10min");
+			common.infoLog("绛夊緟10min");
 			common.waitTime(601);
 			if (common.device.isScreenOn() == false)
 			{
@@ -140,7 +140,7 @@ public class Sleeptime_setting extends Base {
 			common.startLog( "*****End to run " + runcase + " *****");
 		}
 	}
-	//10m设置
+	//10m璁剧疆
 	public void testNever() throws Exception{
 		try {
 			initUIAutomator(this.getName());
@@ -153,7 +153,7 @@ public class Sleeptime_setting extends Base {
 			common.findViewByText("Display").click();
 			common.findViewByText("Sleep").click();
 			common.findViewByText("Never").click();
-			common.infoLog("等待10min");
+			common.infoLog("绛夊緟10min");
 			common.waitTime(601);
 			if (common.device.isScreenOn() == false)
 			{
@@ -172,9 +172,9 @@ public class Sleeptime_setting extends Base {
 			common.startLog( "*****End to run " + runcase + " *****");
 		}
 	}
-	//never设置
+	//never璁剧疆
 	public static void main(String args[]){
-		new UiAutomatorHelper("one.hardware.Testcase", "one.hardware.Testcase.Sleeptime_setting", "test15Seconds", "3");
+		new UiAutomatorHelper("one.hardware.Testcase", "one.hardware.Testcase.Sleeptime_setting", "test15Seconds", "2");
 	}
 
 }
