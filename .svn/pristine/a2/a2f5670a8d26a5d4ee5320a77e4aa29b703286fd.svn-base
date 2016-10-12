@@ -1,0 +1,35 @@
+package one.test;
+
+
+import one.hardware.Action.FileManagerAction;
+import one.hardware.Util.Base;
+
+
+public class test2 extends Base{
+	public void testA() throws Exception{
+		try {
+			initUIAutomator(this.getName());
+			common.startLog("*****Start to run " + runcase + " *****");
+			common.initDevice();
+			//common.startCamera();
+			String videoName = "VID_20160828015154_60fps.mp4";
+			FileManagerAction.playVideoByFileManager(videoName);
+			
+			if (common.findViewByText2("^Can't play this video.*").exists()) {
+				common.infoLog(videoName+" 播放失败" + "-Can't play this video");
+				common.findViewById2("android:id/button1").clickAndWaitForNewWindow();
+				common.failcase(runcase);
+				throw new Exception("FindObject" + "Can't play this video");
+			}else {
+				common.infoLog(videoName+" 播放成功");
+				common.passcase();
+			}
+			
+			common.startLog( "*****End to run " + runcase + " *****");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			common.handleException(e.getMessage());
+		}
+		
+	}
+}
