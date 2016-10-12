@@ -174,7 +174,7 @@ public class Sleeptime_setting extends Base {
 	}
 	//never璁剧疆
 	public static void main(String args[]){
-		new UiAutomatorHelper("one.hardware.Testcase", "one.hardware.Testcase.Sleeptime_setting", "test15Seconds", "2");
+		new UiAutomatorHelper("one.hardware.Testcase", "one.hardware.Testcase.Sleeptime_setting", "test15Seconds", "3");
 	}
 
 }
